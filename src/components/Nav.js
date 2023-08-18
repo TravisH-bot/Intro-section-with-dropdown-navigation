@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import logo from "../images/logo.svg";
 import todo from "../images/icon-todo.svg";
 import calendar from "../images/icon-calendar.svg";
@@ -8,15 +8,23 @@ import arrowDown from "../images/icon-arrow-down.svg";
 import arrowUp from "../images/icon-arrow-up.svg";
 
 const Nav = () => {
-  const [open, setOpen] = useState(false);
-  const [openTwo, setOpenTwo] = useState(false);
+  const [openFeatures, setOpenFeatures] = useState(false);
+  const [openCompany, setOpenCompany] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(!open);
+  const handleOpenFeatures = () => {
+    setOpenFeatures(!openFeatures);
   };
 
-  const handleOpenTwo = () => {
-    setOpenTwo(!openTwo);
+  const handleOpenCompany = () => {
+    setOpenCompany(!openCompany);
+  };
+
+  const featuresLinkClick = (e) => {
+    setOpenFeatures(false);
+  };
+
+  const companyLinkClick = (e) => {
+    setOpenCompany(false);
   };
 
   return (
@@ -25,36 +33,36 @@ const Nav = () => {
         <img className="logo" src={logo} alt="company logo"></img>
         <ul>
           <a href="#">
-            <li onClick={handleOpen}>
+            <li onClick={handleOpenFeatures}>
               Features{" "}
               <img
                 className="arrow"
-                src={arrowDown}
+                src={openFeatures ? arrowUp : arrowDown}
                 alt="arrow down icon"
               ></img>
             </li>
           </a>
-          {open ? (
+          {openFeatures ? (
             <ul className="menu">
-              <li className="menu-item">
+              <li onClick={featuresLinkClick} className="menu-item">
                 <a href="#">
                   <img className="icon" src={todo} alt="todo icon"></img> Todo
                   List
                 </a>
               </li>
-              <li className="menu-item">
+              <li onClick={featuresLinkClick} className="menu-item">
                 <a href="#">
                   <img className="icon" src={calendar} alt="todo icon"></img>{" "}
                   Calendar
                 </a>
               </li>
-              <li className="menu-item">
+              <li onClick={featuresLinkClick} className="menu-item">
                 <a href="#">
                   <img className="icon" src={reminder} alt="todo icon"></img>{" "}
                   Reminders
                 </a>
               </li>
-              <li className="menu-item">
+              <li onClick={featuresLinkClick} className="menu-item">
                 <a href="#">
                   <img className="icon" src={plan} alt="todo icon"></img>{" "}
                   Planning
@@ -64,24 +72,24 @@ const Nav = () => {
           ) : null}
 
           <a href="#">
-            <li onClick={handleOpenTwo}>
+            <li onClick={handleOpenCompany}>
               Company{" "}
               <img
                 className="arrow"
-                src={arrowDown}
+                src={openCompany ? arrowUp : arrowDown}
                 alt="arrow down icon"
               ></img>
             </li>
           </a>
-          {openTwo ? (
+          {openCompany ? (
             <ul className="menu-two">
-              <li className="menu-item-two">
+              <li onClick={companyLinkClick} className="menu-item-two">
                 <a href="#">History</a>
               </li>
-              <li className="menu-item-two">
+              <li onClick={companyLinkClick} className="menu-item-two">
                 <a href="#">Our Team</a>
               </li>
-              <li className="menu-item-two">
+              <li onClick={companyLinkClick} className="menu-item-two">
                 <a href="#">Blog</a>
               </li>
             </ul>
