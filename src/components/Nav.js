@@ -36,6 +36,7 @@ const Nav = () => {
         <div className="bottom-side">
           {mobileOpen ? <MobileNavBottom /> : null}
         </div>
+        <div className={isActive ? "opacity-filter" : null}></div>
       </div>
     </div>
   );
