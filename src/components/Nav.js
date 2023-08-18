@@ -9,9 +9,11 @@ import closeNav from "../images/icon-close-menu.svg";
 
 const Nav = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const handleOpenMobileNav = () => {
     setMobileOpen(!mobileOpen);
+    setIsActive((current) => !current);
   };
 
   return (
@@ -25,10 +27,11 @@ const Nav = () => {
       </div>
       <img
         onClick={handleOpenMobileNav}
-        className="mobile-nav-icon"
         src={mobileOpen ? closeNav : openNav}
+        className="mobile-nav-icon"
       ></img>
-      <div className="mobile-nav active">
+
+      <div className={isActive ? "mobile-nav-visible" : "mobile-nav-hidden"}>
         <div className="top-side">{mobileOpen ? <MobileNavTop /> : null}</div>
         <div className="bottom-side">
           {mobileOpen ? <MobileNavBottom /> : null}
