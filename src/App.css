@@ -158,6 +158,73 @@ body {
 .bottom-side {
   display: none;
 }
+
+/* ============================== Main Section ============================== */
+.main-section {
+  display: flex;
+  padding: 0 5rem;
+}
+
+/* ========= Info ========= */
+.info {
+  width: 50%;
+  padding: 5rem 5rem 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.info h1 {
+  color: var(--almost-black);
+  font-size: 6rem;
+  padding-right: 6rem;
+}
+
+.info p {
+  color: var(--medium-gray);
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+  padding: 0 6rem 0 0;
+}
+
+.learn {
+  border-style: none;
+  width: 12rem;
+  height: 3.8rem;
+  font-size: 1.4rem;
+  border-radius: 0.7rem;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  cursor: pointer;
+}
+
+.learn:hover {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  border: 0.15rem solid var(--almost-black);
+}
+
+.graphics {
+  display: inline-flex;
+  justify-content: space-between;
+  padding-right: 6rem;
+}
+
+.graphics img {
+  scale: 0.8;
+}
+
+/* ========= Main Graphic ========= */
+.main-graphic {
+  padding: 5rem;
+  width: 50%;
+}
+
+.main-graphic img {
+  width: 35rem;
+  height: 44rem;
+}
+
 /* ============================== Media Queries ============================== */
 @media screen and (max-width: 1000px) {
   /* ========= Left side ========= */
