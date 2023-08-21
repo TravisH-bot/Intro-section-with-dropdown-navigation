@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Intro-section-with-dropdown-navigation/static/css/main.8b403a1b.css",
+    "main.css": "/Intro-section-with-dropdown-navigation/static/css/main.00411e44.css",
     "main.js": "/Intro-section-with-dropdown-navigation/static/js/main.842ea633.js",
     "static/media/image-hero-desktop.png": "/Intro-section-with-dropdown-navigation/static/media/image-hero-desktop.50cc22fddeb0c072b414.png",
     "static/media/image-hero-mobile.png": "/Intro-section-with-dropdown-navigation/static/media/image-hero-mobile.adefc8b1bbed2ca80470.png",
@@ -18,11 +18,11 @@
     "static/media/icon-menu.svg": "/Intro-section-with-dropdown-navigation/static/media/icon-menu.863803c904916606b7a1998b3c5736aa.svg",
     "static/media/icon-arrow-down.svg": "/Intro-section-with-dropdown-navigation/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
     "static/media/icon-arrow-up.svg": "/Intro-section-with-dropdown-navigation/static/media/icon-arrow-up.01861a1152dfab5f1070228d306352f4.svg",
-    "main.8b403a1b.css.map": "/Intro-section-with-dropdown-navigation/static/css/main.8b403a1b.css.map",
+    "main.00411e44.css.map": "/Intro-section-with-dropdown-navigation/static/css/main.00411e44.css.map",
     "main.842ea633.js.map": "/Intro-section-with-dropdown-navigation/static/js/main.842ea633.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b403a1b.css",
+    "static/css/main.00411e44.css",
     "static/js/main.842ea633.js"
   ]
 }
