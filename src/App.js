@@ -5,6 +5,7 @@ import audioPhile from "./images/client-audiophile.svg";
 import meet from "./images/client-meet.svg";
 import maker from "./images/client-maker.svg";
 import hero from "./images/image-hero-desktop.png";
+import mobileHero from "./images/image-hero-mobile.png";
 import Footer from "./components/Footer";
 
 function App() {
@@ -29,7 +30,14 @@ function App() {
           </div>
 
           <div className="main-graphic">
-            <img src={hero}></img>
+            <picture>
+              <source
+                className="desktop-hero"
+                media="(min-width: 1000px)"
+                srcSet={hero}
+              ></source>
+              <img className="mobile-hero" src={mobileHero}></img>
+            </picture>
           </div>
         </section>
       </div>

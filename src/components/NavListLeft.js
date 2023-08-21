@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { useState, useEffect, useRef } from "react";
+import useClickOutside from "../hooks/useClickOutside";
 import todo from "../images/icon-todo.svg";
 import calendar from "../images/icon-calendar.svg";
 import reminder from "../images/icon-reminders.svg";
@@ -27,8 +27,13 @@ const NavListLeft = () => {
     setOpenCompany(false);
   };
 
+  let domNode = useClickOutside(() => {
+    setOpenFeatures(false);
+    setOpenCompany(false);
+  });
+
   return (
-    <ul>
+    <ul ref={domNode}>
       <a href="#">
         <li onClick={handleOpenFeatures}>
           Features{" "}
